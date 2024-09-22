@@ -1,0 +1,119 @@
+@mixin navbar-style (){
+    .navbar {
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #fff;
+        z-index: 1000;
+    
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+            padding-top: 1rem;
+            font-family: $font-family-poppins;
+            font-weight: $font-weight-semi-bold;
+    
+            li {
+                position: relative;
+    
+                a {
+                    text-decoration: none;
+                    color: $primary-color;
+                    padding: 10px;
+                    border-radius: 5px;
+                    transition: background-color 0.4s;
+    
+                    &:hover {
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
+    
+                    .down-arrow {
+                        margin-left: 5px;
+                        vertical-align: middle;
+                    }
+                }
+    
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: #fff;
+                    z-index: 1000;
+                    margin-top: 0;
+                    border-radius: 5px;
+                    box-shadow: 0 15px 13px rgba(10, 124, 194, 0.244);
+    
+                    li {
+                        padding: 10px 0;
+                        white-space: nowrap;
+    
+                        a {
+                            color: $secondary-color;
+                            &:hover {
+                                background-color: $primary-color;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+    
+                &:hover .dropdown {
+                    display: block;
+                }
+            }
+        }
+    
+        .logo {
+            width: 10rem;
+            height: 1.8rem;
+            padding-top: 15px;
+            padding-left: 2.5rem;
+            cursor: pointer;
+        }
+    
+        a {
+            text-decoration: none;
+    
+            .connect-btn {
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: $border-radius;
+                border: none;
+                background: linear-gradient(115deg, #005C97 70%, #0A7AC2 30%);
+                width: 10.3rem;
+                height: 2.8rem;
+                cursor: pointer;
+                transition: background-color 1s ease;
+                margin: 5px 3rem 0 0;
+    
+                p {
+                    color: #fff;
+                    font-family: $font-family-poppins;
+                    font-weight: $font-weight-semi-bold;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    margin: 0 0 0 14px ;
+                }
+    
+                img {
+                    margin: 0 10px 0 0;
+                }
+            }
+    
+            .connect-btn:hover {
+                background: linear-gradient(115deg, #0A7AC2 70%, #005C97 30%);
+            }
+        }
+    }
+}

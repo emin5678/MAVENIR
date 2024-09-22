@@ -1,0 +1,230 @@
+@import 'variables';
+@import 'layout/navbar';
+@import 'layout/footer';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@include navbar-style ();
+
+// forms
+
+.contact-container {
+    height: 150vh;
+    margin-bottom: 150px;
+    // background-color: lightblue;
+
+
+    .top-bar {
+        display: flex;
+        margin: 90px 0 0 10%;
+        gap: 16px;
+
+        p {
+            font-family: $secondary-font-family-Lato;
+            font-weight: $font-weight-regular;
+            font-size: 18px;
+            color: $fifth-color;
+            line-height: 18px;
+            transition: 0.3s ease;
+            cursor: pointer;
+
+            i {
+                margin-right: 1rem;
+                transform: scale(0.8);
+            }
+        }
+
+        p:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .contact-text {
+        display: flex;
+        flex-direction: column;
+
+        .text {
+            margin: 8rem 0 0 10%;
+
+            h1 {
+                font-family: $font-family-poppins;
+                font-weight: $font-weight-light;
+                font-size: 50px;
+                line-height: 130%;
+                color: $primary-color;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            h1 span {
+                font-weight: $font-weight-medium
+            }
+
+            .contact-redline {
+                @include redline-style;
+                margin: 17px 0 42px 0;
+            }
+        }
+
+        .buttons {
+            display: flex;
+            margin: 0 0 0 10%;
+            gap: 10px;
+
+            a {
+                text-decoration: none;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex: 1;
+                    border: 1px solid hsla(0, 0%, 0%, 0.2);
+                    border-radius: $border-radius;
+                    background-color: #fff;
+                    height: 2.75rem;
+                    transition: 0.3s ease;
+
+                    p {
+                        font-family: $font-family-poppins;
+                        font-weight: $font-weight-semi-bold;
+                        font-size: 16px;
+                        line-height: 150%;
+                        text-transform: uppercase;
+                        color: $primary-color;
+                        margin: 20px 10px;
+                    }
+                }
+
+                button:hover {
+                    background-color: $primary-color;
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .forms-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px;
+        margin: 33px 0 0 10%;
+
+        .label-wrap,
+        .bottom-form {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+
+            label {
+                grid-column: span 1;
+                margin: 0 0 5px 0;
+                font-family: $secondary-font-family-Lato;
+                font-weight: $lato-font-weight-bold;
+                font-size: 16px;
+                line-height: 24px;
+                color: $seventh-color;
+            }
+
+            select,
+            input {
+                font-family: $secondary-font-family-Lato;
+                font-weight: $lato-font-weight-bold;
+                font-size: 16px;
+                line-height: 24px;
+                color: $fifth-color;
+                border-radius: $border-radius;
+                border: 1px solid hsla(0, 0%, 20%, 0.2);
+                margin: 0;
+                width: 32rem;
+                padding: 18px 0 18px 20px;
+                outline: none;
+            }
+
+            select {
+                appearance: none;
+                background-image: url(/img/downArrow2.svg);
+                background-repeat: no-repeat;
+                background-position: right 20px center;
+                background-size: 15px;
+                cursor: pointer;
+                width: 33.4rem;
+            }
+        }
+
+        .bottom-form {
+            grid-column: span 2;
+
+            input {
+                width: 88.5%;
+                height: 7.5rem;
+            }
+        }
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 24px 10%;
+
+        .check-box {
+            display: flex;
+            align-items: center;
+
+            .checkbox {
+                width: 30px;
+                height: 30px;
+            }
+
+            .checkbox-label {
+                font-family: $secondary-font-family-Lato;
+                font-weight: $font-weight-regular;
+                font-size: 16px;
+                color: $seventh-color;
+                line-height: 24px;
+                margin-left: 5px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+            .submit-btn {
+                display: flex;
+                text-align: center;
+                justify-content: space-between;
+                align-items: center;
+                border-radius: $border-radius;
+                border: none;
+                background: linear-gradient(115deg, #005C97 70%, #0A7AC2 30%);
+                width: 9rem;
+                height: 2.8rem;
+                cursor: pointer;
+                transition: background-color 1s ease;
+                margin: 5px -1rem 0 0;
+    
+                p {
+                    color: #fff;
+                    font-family: $font-family-poppins;
+                    font-weight: $font-weight-semi-bold;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    margin: 0 0 0 14px;
+                }
+    
+                img {
+                    margin: 0 5px 0 0;
+                }
+            }
+    
+            .submit-btn:hover {
+                background: linear-gradient(115deg, #0A7AC2 70%, #005C97 30%);
+            }
+        }
+    }
+}
+
+@include footer ;

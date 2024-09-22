@@ -1,0 +1,194 @@
+@mixin footer {
+    .homepage-footer {
+        height: 100%;
+        background-image: linear-gradient(hsl(0, 0%, 20%) 5%, hsla(0, 0%, 0%, 0)), url(/img/footerbg.png), url(/img/Rectangle419.svg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        margin-top: 3.125rem;
+        z-index: 0;
+    
+        .gray-top {
+            position: absolute;
+            top: -3.125rem;
+            background-color: #333333;
+            height: 3.125rem;
+            width: 100%;
+            z-index: -1;
+        }
+    
+    
+        .footer-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+    
+    
+            p {
+                font-family: $font-family-poppins;
+                font-weight: $font-weight-semi-bold;
+                color: $fourth-color;
+                font-size: 18px;
+                line-height: 150%;
+                letter-spacing: 10%;
+                margin: 0;
+                padding-top: 4rem;
+            }
+    
+            h1 {
+                font-family: $font-family-poppins;
+                font-weight: $font-weight-extra-light;
+                color: $fourth-color;
+                font-size: 4rem;
+                line-height: 110%;
+                text-transform: uppercase;
+                margin: 25px 25px;
+            }
+    
+            .footer-redline {
+                @include redline-style;
+            }
+
+            a {
+                text-decoration: none;
+    
+            .footer-btn {
+                position: relative;
+                height: 2.8rem;
+                width: 10.3rem;
+                background: linear-gradient(115deg, hsl(203, 90%, 40%) 75%,
+                        hsl(200, 50%, 53%) 25%);
+                border: none;
+                border-radius: $border-radius;
+                cursor: pointer;
+    
+                p {
+                    position: absolute;
+                    left: 1rem;
+                    bottom: 10px;
+                    text-transform: uppercase;
+                    font-family: $font-family-poppins;
+                    font-weight: $font-weight-semi-bold;
+                    font-size: 16px;
+                    color: #ffffff;
+                }
+    
+                img {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 13px;
+                    width: 14px;
+                    height: 16px;
+                }
+            }
+    
+            .footer-btn:hover {
+                background: linear-gradient(115deg, hsl(200, 50%, 53%) 75%,
+                        hsl(203, 90%, 40%)25%);
+            }
+        }
+    }
+    
+        .footer-inputs {
+            margin-top: 5rem;
+        }
+    
+        h2 {
+            font-family: $font-family-poppins;
+            font-weight: $font-weight-semi-bold;
+            font-size: 22px;
+            line-height: 130%;
+            color: $fourth-color;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    
+        .footer-inputs-group {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 19px;
+            gap: 20px;
+    
+            input {
+                width: 13.4rem;
+                height: 3rem;
+                padding: 0;
+                border: none;
+                border-radius: $border-radius;
+                padding-left: 2rem;
+    
+                &::placeholder {
+                    font-family: $font-family-poppins;
+                    font-weight: $font-weight-semi-bold;
+                    font-size: 18px;
+                    line-height: 130%;
+                    text-transform: capitalize;
+                    color: $primary-color;
+                    margin: 0;
+                }
+            }
+    
+            .footer-btn-2 {
+                width: 2.7rem;
+                height: 2.7rem;
+                border-radius: 50%;
+                border: none;
+                margin-top: 3px;
+                transition: 0.3s ease;
+    
+                img {
+                    width: 15px;
+                    height: 16px;
+                    margin-top: 3px;
+                }
+            }
+        }
+    
+        .footer-links-1, 
+        .footer-links-2,
+        .footer-links-3 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            margin-top: 4rem;
+    
+    
+            a {
+                font-family: $secondary-font-family-Lato;
+                font-weight: $lato-font-weight-bold;
+                font-size: 14px;
+                line-height: 150%;
+                text-decoration: none;
+                color: $fourth-color;
+            }
+        }
+    
+        .footer-links-2 {
+            font-weight: $font-weight-regular;
+            margin-top: 28px;
+        }
+    
+        .footer-line {
+            margin-top: 38px;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+        }
+    
+        .footer-links-3 {
+            margin-top: 32px;
+            line-height: 150%;
+    
+            a:nth-of-type(1) {
+                margin-right: 12.5rem;
+            }
+    
+            a:nth-of-type(4) {
+                margin-left: 12.5rem;
+            }
+        }
+    }
+}

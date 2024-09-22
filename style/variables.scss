@@ -1,0 +1,45 @@
+$font-family-poppins: 'Poppins', sans-serif;
+$secondary-font-family-Lato: 'Lato', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 400;
+$text-transform-uppercase: uppercase; 
+
+//lato specific weights
+$lato-font-weight-bold: 700; 
+
+//colors
+$primary-color: #003972;
+$secondary-color: #0A7AC2;
+$redline-color: #ED1C2B;
+$third-color: #6CCBFC;
+$fourth-color: #ffffff;
+$fifth-color: #333333;
+$sixth-color: #005C97;
+$seventh-color: #001F44;
+
+//border radius
+$border-radius: 5px;
+
+//scale factor
+
+$scale-factor: 0.75;
+
+//mixins
+@mixin redline-style {
+    width: 3.1rem;
+    height: 4px;
+    background-color: $redline-color;
+    margin: 0 0 28px 0;
+}
+
+@mixin purple-line {
+    width: 1rem;
+    height: 11rem;
+    transform: rotate(-20.78deg) skewY(20deg);
+    background-color: #8E17BA;
+}
+
